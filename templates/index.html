@@ -3,53 +3,42 @@
  <head>
  <title>Página Principal</title>
  </head>
- <body>
- <h3>Práctica 1 - Computación en Red</h3>
- <a href = "/register">Registro</a><br>
- <a href = "/login">Iniciar Sesión</a><br>
- <a href = "/logout">Cerrar Sesión</a><br><br>
-
- <form method = "POST" action = "./media_1">
-   <input type = "submit" value = "Media BBDD local"><br>
- </form>
-
- <form method = "POST" action = "./media_2">
-   <input type = "submit" value = "Media BBDD Internet"><br>
- </form>
-
- <div class="window-container" draggable="false" style="float:left;">
-   <div title="Numero aleatorio" class="window-header">
-     <div class="window-title">Último número aleatorio generado</div>
-   <div class="window-content">
-     <iframe class="window-iframe" src="https://thingspeak.com/channels/1194117/widgets/226471"></iframe><br>
-   </div>
-   </div>
-   <div id="window_7093061" class="window-container" draggable="false">
-    <div title="Histórico de valores" class="window-header">
-      <div class="window-title">Histórico de valores</div>
-       <div id="controls" class="window-controls">
-        <div style="padding-top: 2px;">
-         <a target="_blank" class="chart-header" href="https://thingspeak.com/channels/1194117/charts/1?bgcolor=%23ffffff&amp;color=%23d62020&amp;dynamic=true&amp;results=60&amp;type=line&amp;update=15" draggable="false">
-            <i class="fa fa-external-link fa-lg"></i>
-         </a>
-        </div>
-        <div class="window-content">
-          <iframe id="window_iframe_7093061" class="window-iframe" width="500" height="250" src="https://thingspeak.com/channels/1194117/charts/1?bgcolor=%23ffffff&amp;color=%23d62020&amp;dynamic=true&amp;results=60&amp;type=line&amp;update=15"></iframe>
-        </div>
-       </div>
+ <body background='https://i.hipertextual.com/2017/03/22/4e4dda6144037fcffe210fd670c6dc8a.jpg'>
+   <div style="font-family:candara;">
+     <h1 align="center">Práctica 1 - Computación en Red</h1>
+     <div>
+       <a style="font-size:130%;" href = "/register">Registro</a> | <a style="font-size:130%;" href = "/login">Iniciar Sesión</a> | <a style="font-size:130%;" href = "/logout">Cerrar Sesión</a>
+       <p style="color:white;font-family:courier;"><i>{{msj}}<i><br>
+         <i>{{peticiones}}<i></p>
      </div>
+     <br>
+     <div>
+       <form method = "POST" action = "./media_1">
+         <input style="font-size: 14px;" type = "submit" value = "Media BBDD local"><br>
+       </form>
+
+       <form method = "POST" action = "./media_2">
+         <input style="font-size: 14px;" type = "submit" value = "Media BBDD Internet"><br>
+       </form>
+
+       <form method = "POST" action = "./graficas_externas">
+         <input style="font-size: 14px;" type = "submit" value = "Gráficas externas"><br>
+       </form>
+     </div>
+
+     <div>
+     <form method = "POST" action = "./umbral_historico">
+       Umbral histórico  <input type = 'number' name = 'umbral'>
+       <input style="font-size: 14px;" type = "submit" value = "Calcula"><br>
+     </form>
    </div>
- </div><br>
 
- <form method = "POST" action = "./umbral_historico">
-   <br>Umbral histórico  <input type = 'number' name = 'umbral'>
-   <input type = "submit" value = "Calcula"><br>
- </form>
-
- <p><i>{{media1}}<i></p>
- <p><i>{{media2}}<i></p>
- <p><i>{{umbral}}<i></p>
- <p><i>{{n_aleatorio}}<i></p>
- <p><i>{{msj}}<i></p>
+    <div style="font-family:courier;">
+     <p><i>{{media1}}<i><br>
+        <i>{{media2}}<i><br>
+        <i>{{umbral}}<i><br>
+        <i>{{n_aleatorio}}<i></p>
+    </div>
+  </div>
  </body>
  </html>
